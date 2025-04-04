@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/image2.jpg') }}');">
+    <div class="container">
+        <h1>Enter Parameters for Prediction</h1>
+        <form method="POST" action="{{ url_for('predict') }}">
+            <label for="N">Nitrogen (N):</label>
+            <input type="number" id="N" name="N" required>
+            <label for="P">Phosphorus (P):</label>
+            <input type="number" id="P" name="P" required>
+            <label for="K">Potassium (K):</label>
+            <input type="number" id="K" name="K" required>
+            <label for="SHumidity">Soil Humidity (%):</label>
+            <input type="number" id="SHumidity" name="SHumidity" required>
+            <label for="STempearture">Soil Temperature (°C):</label>
+            <input type="number" id="STempearture" name="STempearture" required>
+            <label for="AHumidity">Air Humidity (%):</label>
+            <input type="number" id="AHumidity" name="AHumidity" required>
+            <label for="ATempearture">Air Temperature (°C):</label>
+            <input type="number" id="ATempearture" name="ATempearture" required>
+            <label for="PH">pH Level:</label>
+            <input type="number" id="PH" name="PH" required>
+            <label for="Rainfall">Rainfall (mm):</label>
+            <input type="number" id="Rainfall" name="Rainfall" required>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        {% if prediction %}
+        <h2>Predicted Crop: {{ prediction }}</h2>
+        <a href="{{ url_for('predict') }}" class="btn">Predict Again</a>
+        {% endif %}
+    </div>
+</body>
+</html>

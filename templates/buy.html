@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Buying</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/image1.jpg') }}');">
+    <div class="container">
+        <h1>Start Buying</h1>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Crop Monitoring Module">
+            <a href="{{ url_for('product', product_id=1) }}" class="btn">Buy</a>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/image4.jpg') }}" alt="Product 2">
+            <a href="{{ url_for('product', product_id=2) }}" class="btn">Buy</a>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/image5.jpeg') }}" alt="Product 3">
+            <a href="{{ url_for('product', product_id=3) }}" class="btn">Buy</a>
+        </div>
+    </div>
+</body>
+</html>

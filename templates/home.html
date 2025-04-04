@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/image1.jpg') }}');">
+    <div class="container">
+        <h1>Welcome to Crop Prediction</h1>
+        <p>“The farmer has to be an optimist or he wouldn’t still be a farmer.”</p>
+        <a href="{{ url_for('predict') }}" class="btn">Start Predicting</a>
+        <h2>Or</h2>
+        <a href="{{ url_for('buy') }}" class="btn">Start Buying</a>
+    </div>
+</body>
+</html>
