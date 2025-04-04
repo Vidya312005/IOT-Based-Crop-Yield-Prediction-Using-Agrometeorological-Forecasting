@@ -1,2 +1,0 @@
-# IOT-Based-Crop-Yield-Prediction-Using-Agrometeorological-Forecasting
-This project helps farmers choose the best crops to grow and makes it easier for them to get the things they need like seeds, fertilizers, and tools.  We use the K-Nearest Neighbors (KNN) algorithm to suggest crops based on real-time data like:  Nitrogen, Phosphorus, Potassium (NPK) Soil moisture pH level Temperature Humidity Rainfall Air quality.
